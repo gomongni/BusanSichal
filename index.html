@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>부산 문화예술 시찰 안내 | 2026.10.21–10.23</title>
+  <meta name="theme-color" content="#0f172a" />
+  <style>
+    :root{
+      --bg:#f4f6f8; --card:#ffffff; --ink:#111827; --muted:#6b7280; --line:#e5e7eb;
+      --navy:#0f172a; --blue:#2563eb; --sky:#eaf2ff; --orange:#ff6b2c; --green:#0f9f6e;
+      --radius:20px; --shadow:0 10px 30px rgba(15,23,42,.08);
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:var(--ink);line-height:1.55}
+    a{color:inherit;text-decoration:none}
+    .app{max-width:480px;margin:0 auto;background:#fff;min-height:100vh;box-shadow:0 0 0 1px rgba(0,0,0,.02)}
+    .hero{position:relative;padding:26px 22px 24px;background:linear-gradient(145deg,#0f172a 0%,#172554 58%,#1d4ed8 100%);color:#fff;overflow:hidden}
+    .hero:after{content:"";position:absolute;right:-70px;top:-40px;width:210px;height:210px;border-radius:50%;background:rgba(255,255,255,.08)}
+    .badge{display:inline-flex;align-items:center;gap:7px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.12);font-size:12px;font-weight:700;letter-spacing:.02em}
+    h1{font-size:29px;line-height:1.15;margin:14px 0 10px;letter-spacing:-.03em}
+    .hero p{margin:0;color:#dbeafe;font-size:14px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.chip{padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.12);font-size:12px}
+    .summary{margin:-8px 16px 0;position:relative;z-index:2;background:#fff;border-radius:18px;box-shadow:var(--shadow);display:grid;grid-template-columns:repeat(3,1fr);padding:16px 10px}
+    .sum{text-align:center;border-right:1px solid var(--line)}.sum:last-child{border-right:none}.sum b{display:block;font-size:15px}.sum span{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+    section{padding:22px 18px 0}.section-title{display:flex;align-items:end;justify-content:space-between;margin-bottom:12px}.section-title h2{font-size:19px;margin:0;letter-spacing:-.02em}.section-title small{color:var(--muted)}
+    .card{background:var(--card);border:1px solid #eef0f3;border-radius:var(--radius);box-shadow:0 6px 18px rgba(15,23,42,.05);overflow:hidden}
+    .flight{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:18px}.airport b{font-size:24px}.airport span{display:block;font-size:12px;color:var(--muted)}.airport.right{text-align:right}.plane{font-size:22px;color:var(--blue)}
+    .flight-meta{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}.flight-meta div{padding:12px 14px}.flight-meta div+div{border-left:1px solid var(--line)}.label{font-size:11px;color:var(--muted)}.value{font-size:14px;font-weight:700;margin-top:2px}
+    .hotel{padding:18px}.hotel strong{font-size:17px}.hotel p{font-size:13px;color:var(--muted);margin:6px 0 14px}.btnrow{display:flex;gap:8px;flex-wrap:wrap}.btn{display:inline-flex;justify-content:center;align-items:center;gap:6px;padding:10px 13px;border-radius:12px;background:#111827;color:#fff;font-size:13px;font-weight:700}.btn.alt{background:#eef2ff;color:#1d4ed8}.btn.soft{background:#f3f4f6;color:#374151}
+    .days{display:flex;flex-direction:column;gap:14px}.day{border-radius:22px;background:#fff;border:1px solid #edf0f3;box-shadow:0 8px 22px rgba(15,23,42,.06);overflow:hidden}.dayhead{padding:17px 18px;background:linear-gradient(90deg,#f8fafc,#eef4ff);display:flex;justify-content:space-between;align-items:center}.dayhead .date{font-size:21px;font-weight:800}.dayhead .tag{font-size:11px;font-weight:700;color:#1d4ed8;background:#dbeafe;padding:5px 8px;border-radius:999px}
+    .timeline{padding:4px 18px 10px}.item{display:grid;grid-template-columns:66px 16px 1fr;gap:8px;padding:13px 0;position:relative}.item:not(:last-child):after{content:"";position:absolute;left:73px;top:32px;bottom:-10px;width:1px;background:#dbe1ea}.time{font-size:12px;color:var(--muted);padding-top:2px}.dot{width:10px;height:10px;border:2px solid var(--blue);border-radius:50%;background:white;margin-top:5px;position:relative;z-index:1}.item.major .dot{background:var(--orange);border-color:var(--orange)}.item.major .title{color:#b93800}.title{font-weight:800;font-size:14px}.desc{font-size:12px;color:var(--muted);margin-top:3px}.mini-link{display:inline-block;margin-top:7px;font-size:11px;color:var(--blue);font-weight:700}
+    .spotlight{padding:18px;background:linear-gradient(145deg,#fff7ed,#fff);border:1px solid #fed7aa}.spotlight .eyebrow{font-size:11px;color:#c2410c;font-weight:800}.spotlight h3{font-size:20px;margin:5px 0 8px}.spotlight p{font-size:13px;color:#6b7280;margin:0 0 12px}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.info{padding:15px;border-radius:16px;background:#f8fafc}.info b{display:block;font-size:13px;margin-bottom:5px}.info span{font-size:12px;color:var(--muted)}
+    .check{padding:16px}.check ul{list-style:none;padding:0;margin:0}.check li{display:flex;gap:9px;padding:9px 0;border-bottom:1px dashed #eceff3;font-size:13px}.check li:last-child{border-bottom:none}.tick{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#ecfdf5;color:var(--green);font-size:12px;font-weight:900;flex:0 0 auto}
+    .note{background:#fff8eb;border:1px solid #fde3b5;padding:14px 15px;border-radius:16px;font-size:12px;color:#7c4a03}
+    .bottom{padding:24px 18px 36px;color:#6b7280;font-size:11px;text-align:center}.sticky{position:sticky;bottom:0;z-index:9;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.96) 26%);display:flex;gap:8px}.sticky .btn{flex:1;box-shadow:0 8px 20px rgba(15,23,42,.12)}
+    @media (min-width:481px){body{padding:24px 0}.app{border-radius:26px;overflow:hidden;min-height:auto}.sticky{border-radius:0 0 26px 26px}}
+  </style>
+</head>
+<body>
+<div class="app">
+  <header class="hero">
+    <div class="badge">CULTURE INSPECTION · BUSAN 2026</div>
+    <h1>부산 문화예술<br>시찰 2박 3일</h1>
+    <p>도립 제주합창단 부산국제합창제 참가 연계 · 문화예술과 4인 시찰팀</p>
+    <div class="chips">
+      <span class="chip">2026.10.21–10.23</span>
+      <span class="chip">부산역 숙박</span>
+      <span class="chip">1일 1개 핵심 일정</span>
+    </div>
+  </header>
+
+  <div class="summary">
+    <div class="sum"><b>2박 3일</b><span>일정</span></div>
+    <div class="sum"><b>4명</b><span>시찰팀</span></div>
+    <div class="sum"><b>10.22 19:30</b><span>합창제 공연</span></div>
+  </div>
+
+  <section>
+    <div class="section-title"><h2>항공 일정</h2><small>확정</small></div>
+    <div class="card">
+      <div class="flight">
+        <div class="airport"><b>CJU</b><span>제주</span></div><div class="plane">→</div><div class="airport right"><b>PUS</b><span>부산</span></div>
+      </div>
+      <div class="flight-meta">
+        <div><div class="label">10.21.(수) 출발</div><div class="value">10:45 · 7C504</div></div>
+        <div><div class="label">권장 공항도착</div><div class="value">09:45 이전</div></div>
+      </div>
+    </div>
+    <div style="height:10px"></div>
+    <div class="card">
+      <div class="flight">
+        <div class="airport"><b>PUS</b><span>부산</span></div><div class="plane">→</div><div class="airport right"><b>CJU</b><span>제주</span></div>
+      </div>
+      <div class="flight-meta">
+        <div><div class="label">10.23.(금) 출발</div><div class="value">11:40 · BX8109</div></div>
+        <div><div class="label">공항 이동</div><div class="value">09:10 전후 출발</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title"><h2>숙소</h2><small>2박</small></div>
+    <div class="card hotel">
+      <strong>부산역 인근 숙소</strong>
+      <p>시찰 이동과 공항 접근을 고려해 부산역 권역에 숙박합니다. 주요 일정은 차량 약 30분 내외 이동권을 중심으로 구성했습니다.</p>
+      <div class="btnrow"><a class="btn alt" href="https://maps.app.goo.gl/menMczvADN2KQ8qAA?g_st=ic" target="_blank">📍 숙소 지도 열기</a></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title"><h2>일정 한눈에 보기</h2><small>DAY 1–3</small></div>
+    <div class="days">
+      <article class="day">
+        <div class="dayhead"><div><div class="date">10.21 수</div><div style="font-size:12px;color:#6b7280">역사문화공간 & 원도심</div></div><span class="tag">DAY 1</span></div>
+        <div class="timeline">
+          <div class="item"><div class="time">10:45</div><div class="dot"></div><div><div class="title">제주 → 부산</div><div class="desc">김해공항 도착 후 부산역 이동 · 중식 · 수하물 보관</div></div></div>
+          <div class="item major"><div class="time">14:00</div><div class="dot"></div><div><div class="title">부산근현대역사관 시찰</div><div class="desc">역사문화공간 조성·운영, 전시·문화프로그램, 기존 건축물 활용사례 확인</div><a class="mini-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%EB%B6%80%EC%82%B0%EA%B7%BC%ED%98%84%EB%8C%80%EC%97%AD%EC%82%AC%EA%B4%80">지도 보기 →</a></div></div>
+          <div class="item"><div class="time">16:00</div><div class="dot"></div><div><div class="title">원도심 문화탐방</div><div class="desc">용두산공원 → 광복로 → BIFF광장·남포동 일원</div></div></div>
+          <div class="item"><div class="time">18:30</div><div class="dot"></div><div><div class="title">석식 · 숙소 이동</div><div class="desc">부산역 인근 숙박</div></div></div>
+        </div>
+      </article>
+
+      <article class="day">
+        <div class="dayhead"><div><div class="date">10.22 목</div><div style="font-size:12px;color:#6b7280">공연장 현장 & 부산국제합창제</div></div><span class="tag">DAY 2</span></div>
+        <div class="timeline">
+          <div class="item"><div class="time">09:30</div><div class="dot"></div><div><div class="title">북항·원도심 문화탐방</div><div class="desc">부산역광장·유라시아플랫폼·북항 친수공간 등</div></div></div>
+          <div class="item"><div class="time">14:00</div><div class="dot"></div><div><div class="title">부산시민공원 문화탐방</div><div class="desc">도심공원과 문화시설·시민문화 프로그램 연계사례 확인</div><a class="mini-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%EB%B6%80%EC%82%B0%EC%8B%9C%EB%AF%BC%EA%B3%B5%EC%9B%90">지도 보기 →</a></div></div>
+          <div class="item"><div class="time">16:30</div><div class="dot"></div><div><div class="title">부산콘서트홀 현장 확인</div><div class="desc">관객동선·로비·공연장 주변 운영 및 합창제 현장 확인</div><a class="mini-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%EB%B6%80%EC%82%B0%EC%BD%98%EC%84%9C%ED%8A%B8%ED%99%80">지도 보기 →</a></div></div>
+          <div class="item"><div class="time">18:00</div><div class="dot"></div><div><div class="title">도립 제주합창단 격려 · 석식</div><div class="desc">공연 준비상황 확인 후 공연 관람 준비</div></div></div>
+          <div class="item major"><div class="time">19:30</div><div class="dot"></div><div><div class="title">2026 부산국제합창제 공연</div><div class="desc">도립 제주합창단 참가 · 부산콘서트홀</div></div></div>
+          <div class="item"><div class="time">21:30</div><div class="dot"></div><div><div class="title">숙소 이동</div><div class="desc">부산역 인근</div></div></div>
+        </div>
+      </article>
+
+      <article class="day">
+        <div class="dayhead"><div><div class="date">10.23 금</div><div style="font-size:12px;color:#6b7280">가벼운 문화탐방 & 복귀</div></div><span class="tag">DAY 3</span></div>
+        <div class="timeline">
+          <div class="item"><div class="time">07:30</div><div class="dot"></div><div><div class="title">조식 · 체크아웃</div><div class="desc">수하물 정리 및 복귀 준비</div></div></div>
+          <div class="item"><div class="time">08:30</div><div class="dot"></div><div><div class="title">부산역·초량 일원 문화탐방</div><div class="desc">당일 교통상황에 따라 탄력 운영</div></div></div>
+          <div class="item major"><div class="time">09:10</div><div class="dot"></div><div><div class="title">김해공항 이동</div><div class="desc">탑승수속·보안검색 여유시간 확보</div></div></div>
+          <div class="item"><div class="time">11:40</div><div class="dot"></div><div><div class="title">부산 → 제주</div><div class="desc">BX8109 · 제주 도착 후 출장 종료</div></div></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title"><h2>이번 시찰의 핵심</h2></div>
+    <div class="card spotlight">
+      <div class="eyebrow">MAIN PROGRAM</div>
+      <h3>도립 제주합창단 격려<br>& 부산국제합창제 관람</h3>
+      <p>10월 22일 19:30 부산콘서트홀. 시찰 일정의 중심 프로그램으로, 전문공연장 운영과 국제 문화행사 현장을 함께 확인합니다.</p>
+      <div class="btnrow"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=%EB%B6%80%EC%82%B0%EC%BD%98%EC%84%9C%ED%8A%B8%ED%99%80">공연장 지도</a></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title"><h2>시찰 포인트</h2></div>
+    <div class="grid2">
+      <div class="info"><b>역사문화공간</b><span>기존 건축물 활용, 전시·시민 프로그램 운영</span></div>
+      <div class="info"><b>전문공연장</b><span>관객동선, 로비, 하우스 운영, 공연장 환경</span></div>
+      <div class="info"><b>국제 문화행사</b><span>행사 운영, 홍보, 관객관리, 지역 연계</span></div>
+      <div class="info"><b>문화탐방</b><span>원도심·공원·북항 등 도시문화 콘텐츠 체감</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title"><h2>준비사항</h2></div>
+    <div class="card check"><ul>
+      <li><span class="tick">✓</span><span>신분증 · 모바일 탑승권 확인</span></li>
+      <li><span class="tick">✓</span><span>10.22 공연 관람용 복장 및 개인 소지품 준비</span></li>
+      <li><span class="tick">✓</span><span>방문기관 시찰 시 확인할 업무 질문 1~2개씩 준비</span></li>
+      <li><span class="tick">✓</span><span>출장 결과보고용 사진·메모 수시 기록</span></li>
+    </ul></div>
+    <div style="height:10px"></div>
+    <div class="note">※ 일정 및 이동시간은 항공·교통상황, 방문기관 운영여건 등에 따라 일부 조정될 수 있습니다.</div>
+  </section>
+
+  <div class="bottom">제주시 문화예술과 · 2026 부산 문화예술 시찰 안내</div>
+
+  <div class="sticky">
+    <a class="btn alt" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ 맨 위로</a>
+    <a class="btn" target="_blank" href="https://maps.app.goo.gl/menMczvADN2KQ8qAA?g_st=ic">숙소 지도</a>
+  </div>
+</div>
+</body>
+</html>
